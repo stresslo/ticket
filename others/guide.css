@@ -1,0 +1,27 @@
+.box-guide {
+    width: 350px;
+    height: 210px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+li { 
+    color: var(--primary); 
+    margin-left: 30px; 
+    padding: 5px 0; 
+    font-family: var(--quicksand); 
+    font-size: 0.9rem;
+}
+li:nth-child(2) { margin-top: 10px; }
+
+@media (max-width: 500px) {
+    .box-guide { width: 100%; }
+}

@@ -1,0 +1,96 @@
+.navbar {
+    width: 90%;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.text-logo { 
+    font-family: var(--quicksand); 
+    font-size: 1.1rem; 
+    color: var(--primary);
+    /* text-shadow: 1.5px 1.5px 1px var(--yellow), 1.5px 1.5px 1px var(--second); */
+}
+
+
+
+.nav-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: var(--yellow);  */
+    /* border: 2px solid var(--second); */
+    /* border-top: 2px solid var(--second); */
+    /* border-right: 2px solid var(--second); */
+    gap: 50px;
+    height: 40px;
+    padding: 0 25px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    transition: 0.7s ease-in-out;
+    /* box-shadow: 3px 3px 5px var(--prime); */
+}
+.item, .item-mobile {
+    text-decoration: none;
+    font-family: var(--quicksand);
+    font-weight: 500;
+    font-size: 0.9rem;
+    /* display: none; */
+    color: var(--primary);
+}
+.item-mobile { display: none; }
+.circle-item {
+    width: 25px;
+    height: 25px;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary);
+}
+
+
+
+.nav-user {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.user {
+    width: 55px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 5px var(--prime);
+    border-radius: 30px;
+    text-decoration: none;
+    border-bottom: 2px solid var(--second);
+    border-right: 2px solid var(--second);
+    /* border: 2px solid var(--primary); */
+    color: var(--primary);
+    /* background-color: var(--primary); */
+}
+
+@media (max-width: 678px) {
+    /* .nav-logo { display: none; } */
+    .nav-user { display: none; }
+    .item { font-size: 0.8rem; }
+}
+
+@media (max-width: 630px) {
+    /* .navbar { flex-direction: row-reverse; } */
+    .nav-item { gap: 20px; padding: 0 0;}
+    .item { display: none; }
+    .item-mobile { display: block; }
+}

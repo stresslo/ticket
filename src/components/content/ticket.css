@@ -1,0 +1,67 @@
+.box-ticket {
+    width: 100%;
+    height: max-content;
+    border-radius: 10px;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    /* box-shadow: inset -3px -3px 1px var(--primary); */
+    /* background-color: var(--second); */
+    border: 1px solid var(--primary);
+    gap: 20px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+.box-ticket:hover { background-color: var(--second); }
+.box-ticket-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-left: 1px solid var(--primary);
+    padding-left: 15px;
+}
+
+
+.box-ticket-number {
+    font-size: 1.1rem;
+    font-family: var(--poppins);
+    color: var(--primary);
+}
+
+.box-ticket-event {
+    font-family: var(--poppins);
+    font-size: 0.95rem;
+    color: var(--primary);
+}
+
+.box-ticket-user {
+    font-size: 0.9rem;
+    font-family: var(--mono);
+    color: var(--primary);
+}
+
+.download-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
+.input-search-ticket::placeholder { color: var(--primary); }
+
+@media(max-width: 450px) {
+    .download-button {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .box-ticket {
+        gap: 20px;
+        padding: 10px 20px;
+    }
+}

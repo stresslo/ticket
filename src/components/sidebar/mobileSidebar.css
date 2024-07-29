@@ -1,0 +1,41 @@
+.mobileSidebar {
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background-color: var(--text);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-right: 1px solid var(--primary);
+    transition: 0.7s ease-in-out;
+}
+
+.mobileSidebar.show {
+    left: 0;
+}
+
+.mid-mobile-sidebar-container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.mid-mobile-sidebar {
+    text-decoration: none;
+    color: var(--primary);
+    display: flex;
+    gap: 0 15px;
+    align-items: center;
+    font-family: var(--poppins);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 630px) {
+    .mobileSidebar { display: flex; }
+}

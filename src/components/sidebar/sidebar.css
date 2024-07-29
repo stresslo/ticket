@@ -1,0 +1,104 @@
+.sidebar {
+    width: 180px;
+    height: 100%;
+    /* background-color: var(--primary); */
+    /* border-radius: 10px; */
+    border-right: 1px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px;
+    box-sizing: border-box;
+    position: relative;
+    gap: 55px;
+    z-index: 10;
+    background-color: var(--text);
+    justify-content: space-between;
+    transition: 0.5s ease-in-out;
+    /* display: none; */
+    /* box-shadow:inset -3px -3px 1px var(--primary); */
+}
+.side-text {
+    font-family: var(--poppins);
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
+.top-sidebar {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-family: var(--poppins);
+    color: var(--primary);
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.mid-sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    gap: 30px;
+    /* transform: translateY(-100px); */
+    font-family: var(--poppins);
+    position: relative;
+}
+.mid-item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-left: 10px;
+    gap: 20px; 
+    cursor: pointer;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+
+.bot-sidebar {
+    width: 100%;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 70px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--primary);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (max-width: 630px) {
+    .top-sidebar { margin-left: 0px; }
+    .side-text {
+        font-size: 0.75rem;
+    }
+    .mid-item {
+        padding-left: 0px;
+        gap: 15px;
+    }
+    .bot-sidebar {
+        margin-left: 0px;
+        gap: 15px;
+    }
+    .sidebar{ 
+        left: -100%;
+        position: absolute;
+        z-index: 10;
+        background-color: var(--text);
+        width: max-content;
+        padding: 5px 0;
+        width: 45%;
+        font-size: 0.9rem;
+    }
+    .bot-sidebar {
+        padding: 40px 0;
+    }
+    .sidebar.mobile-show {
+        transition: 0.5s ease-in-out;
+        left: 0;
+    }
+}
